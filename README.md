@@ -1,5 +1,6 @@
 # MLOps Deployment using Docker Compose
 Easily deploy an MLflow tracking server with docker-compose for model registry and
+a Feast Feature Store for feature tracking.
 
 MinIO S3 is used as the artifact store and MySQL server is used as the backend store.
 
@@ -13,12 +14,15 @@ Build and run the containers with `docker-compose`
 
 Access MLflow UI with http://localhost:5000
 Access MinIO UI with http://localhost:9000
+Access Feast UI with http://localhost:8888
 
 ## Containerization
 
 The MLflow tracking server is composed of 3 docker containers:
 
 * MLflow server
+* Feast server
+* Redis key-value store
 * MinIO object storage server
 * MySQL database server
 
