@@ -1,11 +1,10 @@
-project: feature_repo
-registry: data/registry.db
+project: ELO7_feature_store
+project_description: A sample of anonimized product's data from ELO7.
 provider: local
 online_store:
-    type: sqlite
-    path: data/online_store.db
+    type: redis
+    connection_string: "redis:6379"
 offline_store:
-  type: file
-flags:
-    alpha_features: true
-    on_demand_transforms: true
+    type: file
+registry: s3://feast/registry.pb
+    
